@@ -18,14 +18,34 @@ const Header = () => {
     const element = document.getElementById(id);
     if (element) {
       const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
+      const startPosition = window.pageYOffset;
+      const targetPosition = element.getBoundingClientRect().top + startPosition - headerOffset;
+      const distance = targetPosition - startPosition;
+      
+      // Sürət ayarı: 1500ms = 1.5 saniyə. Daha asta olması üçün rəqəmi artıra bilərsiniz.
+      const duration = 1500; 
+      let start = null;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      // Asta və axıcı hərəkət üçün riyazi Easing funksiyası
+      const easeInOutQuad = (t) => {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      };
+
+      const step = (timestamp) => {
+        if (!start) start = timestamp;
+        const elapsed = timestamp - start;
+        const progress = Math.min(elapsed / duration, 1); // 0-dan 1-ə qədər irəliləyiş
+        
+        const easedProgress = easeInOutQuad(progress);
+        
+        window.scrollTo(0, startPosition + distance * easedProgress);
+
+        if (elapsed < duration) {
+          window.requestAnimationFrame(step);
+        }
+      };
+
+      window.requestAnimationFrame(step);
     }
     setIsMenuOpen(false);
   };

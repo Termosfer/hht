@@ -7,27 +7,49 @@ const Footer = () => {
   const navigate = useNavigate();
 
   const scrollToSection = (id) => {
-    if (location.pathname !== "/") {
-      navigate("/");
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    } else {
-      const element = document.getElementById(id);
+    const customSlowScroll = (targetId) => {
+      const element = document.getElementById(targetId);
       if (element) {
         const headerOffset = 80;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition =
-          elementPosition + window.pageYOffset - headerOffset;
+        const startPosition = window.pageYOffset;
+        const targetPosition =
+          element.getBoundingClientRect().top + startPosition - headerOffset;
+        const distance = targetPosition - startPosition;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
+        const duration = 2000;
+        let start = null;
+
+        const easeInOutCubic = (t) => {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        };
+
+        const step = (timestamp) => {
+          if (!start) start = timestamp;
+          const elapsed = timestamp - start;
+          const progress = Math.min(elapsed / duration, 1);
+
+          window.scrollTo(
+            0,
+            startPosition + distance * easeInOutCubic(progress),
+          );
+
+          if (elapsed < duration) {
+            window.requestAnimationFrame(step);
+          }
+        };
+
+        window.requestAnimationFrame(step);
       }
+    };
+
+    if (location.pathname !== "/") {
+      navigate("/");
+
+      setTimeout(() => {
+        customSlowScroll(id);
+      }, 300);
+    } else {
+      customSlowScroll(id);
     }
   };
 
@@ -46,9 +68,7 @@ const Footer = () => {
       id="contact"
     >
       <div className="max-w-7xl mx-auto">
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16 items-start">
-          
           <div className="space-y-6">
             <div
               className="cursor-pointer"
@@ -68,7 +88,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* 2. Sütun: Menyu */}
           <div className="lg:pl-8">
             <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-[#E04B26] rounded-full"></span>
@@ -92,7 +111,6 @@ const Footer = () => {
             </ul>
           </div>
 
-        
           <div>
             <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-[#00AEEF] rounded-full"></span>
@@ -100,11 +118,11 @@ const Footer = () => {
             </h4>
             <div className="space-y-6">
               <div className="flex gap-4 mb-4">
-               <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-[#E04B26] shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-[#E04B26] shrink-0">
                   <MapPin size={20} />
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Bakı, Nərimanov r.,  Ə.Qayıbov küç 1222, <br />
+                  Bakı, Nərimanov r., Ə.Qayıbov küç 1222, <br />
                   <span className="text-white font-semibold">
                     Azera Holding mərtəbə 3, otaq 62.
                   </span>
@@ -143,7 +161,6 @@ const Footer = () => {
             </div>
           </div>
 
-          
           <div className="w-full">
             <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
               <span className="w-2.5 h-2.5 bg-[#E04B26] rounded-full"></span>
@@ -170,7 +187,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Alt Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] md:text-xs text-gray-400 font-medium text-center md:text-left">
           <p>
             © {new Date().getFullYear()} Hydro Heat Tech (HHT). Bütün hüquqlar
