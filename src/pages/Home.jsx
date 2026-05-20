@@ -10,7 +10,8 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       <section
-        className="relative w-full h-screen bg-[url('/main_44ec5a70b2.jpg')] bg-cover bg-center text-white overflow-hidden"
+        loading="eager"
+        className="relative w-full h-screen bg-[url('/main_44ec5a70b2.jpg')]  bg-cover bg-center text-white overflow-hidden"
         id="home"
       >
         <div className="absolute inset-0 bg-black/50"></div>
