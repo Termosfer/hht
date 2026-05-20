@@ -8,23 +8,20 @@ export default defineConfig({
     react(), 
     tailwindcss(),
     ViteImageOptimizer({
-      webp: {
-        quality: 100, 
-      },
-      jpeg: {
-        quality: 100,
-      }
+      webp: { quality: 80 },
+      jpeg: { quality: 80 }
     })
   ],
   build: {
-    
-    assetsInlineLimit: 4096, 
+    assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
-       
-        manualChunks: {
-          vendor:['react', 'react-dom'], 
-        },
+        // manualChunks artıq funksiya olmalıdır
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor'; // Bütün kitabxanaları 'vendor' adlı bir fayla yığır
+          }
+        }
       },
     },
   },
