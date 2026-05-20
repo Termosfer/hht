@@ -6,12 +6,12 @@ import img5 from "../assets/5.webp";
 import img6 from "../assets/6.webp";
 import img7 from "../assets/6.jpg";
 import img8 from "../assets/8.jpg";
-import img9 from "../assets/9.jpg";
+import img9 from "../assets/9.webp";
 import img10 from "../assets/10.webp";
 import img11 from "../assets/11.webp";
 import img12 from "../assets/12.webp";
 import img13 from "../assets/13.webp";
-import img14 from "../assets/14.png";
+import img14 from "../assets/14.webp";
 
 const services = [
   {
