@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       <section
-        loading="eager"
+        
         className="relative w-full h-screen bg-[url('/main_44ec5a70b2.jpg')]  bg-cover bg-center text-white overflow-hidden"
         id="home"
       >
