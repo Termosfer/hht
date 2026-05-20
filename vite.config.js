@@ -16,10 +16,10 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
-        // manualChunks artıq funksiya olmalıdır
+       
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return 'vendor'; // Bütün kitabxanaları 'vendor' adlı bir fayla yığır
+            return 'vendor'; 
           }
         }
       },

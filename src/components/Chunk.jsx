@@ -54,7 +54,6 @@ const Chunk = () => {
             <div className="pt-6 md:pt-8 border-t border-gray-200 w-full flex justify-center lg:justify-start">
               <div className="h-20 md:h-24 w-48 md:w-52 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center p-4 md:p-6 hover:shadow-md transition-shadow">
                 <img
-                  loading="lazy"
                   src={logo}
                   alt="Chunke HB"
                   className="w-full  object-contain"
