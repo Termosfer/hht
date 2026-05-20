@@ -120,14 +120,14 @@ const Brands = () => {
               onClick={() =>
                 setActiveBrand(activeBrand === index ? null : index)
               }
-              className="relative h-40 md:h-48 border-r border-b border-gray-800 flex flex-col items-center justify-center group transition-all duration-500 hover:bg-[#11234a] cursor-pointer"
+              className="relative h-40 md:h-48 border-r border-b border-gray-800 flex flex-col items-center justify-center group transition-all duration-500 hover:bg-white cursor-pointer"
             >
               <div className="h-16 w-24 md:h-20 md:w-32 flex items-center justify-center transition-all duration-500 group-hover:-translate-y-4">
                 <img
-                loading="lazy"
+                  loading="lazy"
                   src={brand.logo}
                   alt={brand.name}
-                  className="max-h-full max-w-full object-contain brightness-0 invert opacity-60 md:opacity-50 group-hover:opacity-100 group-hover:brightness-100 group-hover:invert-0 transition-all duration-500 px-2"
+                  className="max-h-full max-w-full object-contain brightness-0 invert  group-hover:brightness-100 group-hover:invert-0 transition-all duration-500 px-2"
                 />
                 {!brand.logo && (
                   <span className="text-lg md:text-xl font-bold opacity-20">
