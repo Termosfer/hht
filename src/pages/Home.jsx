@@ -36,7 +36,7 @@ const Home = () => {
                 .getElementById("services")
                 .scrollIntoView({ behavior: "smooth" })
             }
-            className="px-8 py-3 md:px-10 md:py-4 bg-[#c23a1a] hover:bg-[#c0391b] active:scale-95 transition-all rounded-full font-bold text-base md:text-lg shadow-xl uppercase tracking-wider"
+            className="px-8 py-3 md:px-10 md:py-4 bg-[#c23a1a] hover:bg-[#c0391b] active:scale-95 transition-all rounded-full font-bold text-base md:text-lg shadow-xl uppercase tracking-wider cursor-pointer"
           >
             Xidmətlərimiz
           </button>
