@@ -1,5 +1,5 @@
 import Chunk from "../components/Chunk";
-import Clients from "../components/Clients";
+import Clients from "./Clients";
 import ProcessStep from "../components/ProcessStep";
 import WhyBrands from "../components/WhyBrands";
 import About from "./About";

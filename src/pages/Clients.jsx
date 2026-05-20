@@ -74,7 +74,7 @@ const Clients = () => {
       ],
     },
     {
-      title: "Otel, Tibb və İdman",
+      title: "Hotel, Tibb və İdman",
       icon: <Activity className="w-5 h-5 text-purple-500" />,
       list: [
         "Excelsior Hotel MMC",

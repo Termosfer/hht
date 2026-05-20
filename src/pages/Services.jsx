@@ -4,7 +4,7 @@ import img3 from "../assets/3.jpg";
 import img4 from "../assets/4.webp";
 import img5 from "../assets/5.webp";
 import img6 from "../assets/6.webp";
-import img7 from "../assets/6.jpg";
+import img7 from "../assets/7.jpeg";
 import img8 from "../assets/8.jpg";
 import img9 from "../assets/9.webp";
 import img10 from "../assets/10.webp";
