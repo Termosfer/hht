@@ -53,7 +53,7 @@ const Footer = () => {
           
           <div className="space-y-6 w-full lg:max-w-sm">
             <div className="cursor-pointer" onClick={() => scrollToSection("home")}>
-              <img src={logo} alt="HHT Logo" className="h-14 md:h-16 w-auto" />
+              <img loading="lazy" src={logo} alt="HHT Logo" className="h-14 md:h-16 w-auto" />
             </div>
             <p className="text-gray-400 text-sm md:text-base leading-relaxed">
               Hydro Heat Tech (HHT) — sənaye və kommersiya obyektləri üçün

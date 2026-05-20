@@ -124,6 +124,7 @@ const Brands = () => {
             >
               <div className="h-16 w-24 md:h-20 md:w-32 flex items-center justify-center transition-all duration-500 group-hover:-translate-y-4">
                 <img
+                loading="lazy"
                   src={brand.logo}
                   alt={brand.name}
                   className="max-h-full max-w-full object-contain brightness-0 invert opacity-60 md:opacity-50 group-hover:opacity-100 group-hover:brightness-100 group-hover:invert-0 transition-all duration-500 px-2"
