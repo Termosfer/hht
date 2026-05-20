@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
-import logo from "../assets/logo.webp";
+import logo from "../assets/logo1.png";
 
 const Footer = () => {
   const location = useLocation();
