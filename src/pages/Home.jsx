@@ -28,7 +28,7 @@ const Home = () => {
           <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold mb-8 max-w-xs sm:max-w-xl md:max-w-4xl leading-tight drop-shadow-lg">
             Nasos, İstilik və Su sistemləri üzrə{" "}
             <br className="hidden sm:block" />
-            <span className="text-[#00AEEF]">mühəndislik</span> həlləri
+            <span className="text-white">mühəndislik</span> həlləri
           </p>
 
           <button

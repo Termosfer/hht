@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo1 from "../assets/brendlər/ebara.png";
-import logo2 from "../assets/brendlər/grundfos.png";
+import logo2 from "../assets/brendlər/photo.png";
 import logo3 from "../assets/brendlər/wilo.png";
 import logo4 from "../assets/brendlər/calpeda1.png";
 import logo5 from "../assets/brendlər/lowara1.png";
@@ -10,7 +10,7 @@ import logo8 from "../assets/brendlər/flygt1.png";
 import logo9 from "../assets/brendlər/sumak1.png";
 import logo10 from "../assets/brendlər/standart.png";
 import logo11 from "../assets/brendlər/sealand1.png";
-import logo12 from "../assets/brendlər/sep1.png";
+import logo12 from "../assets/brendlər/sep.png";
 const brands = [
   {
     name: "Ebara",
