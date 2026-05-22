@@ -14,7 +14,7 @@ const Chunk = () => {
   const usageAreas = [
     { name: "Zavod və fabriklər", icon: <Factory className="w-5 h-5" /> },
     {
-      name: "Otel və yaşayış kompleksləri",
+      name: "Hotel və yaşayış kompleksləri",
       icon: <Building2 className="w-5 h-5" />,
     },
     { name: "Qazanxana sistemləri", icon: <Thermometer className="w-5 h-5" /> },

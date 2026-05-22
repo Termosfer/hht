@@ -99,7 +99,7 @@ const Clients = () => {
             Müştərilərimiz
           </h2>
           <p className="text-gray-400 max-w-3xl text-base md:text-lg leading-relaxed">
-            2023–2026-cı illər ərzində aşağıdakı dövlət qurumları, holdinqlər, otel, idman, tibb, sənaye müəssisələri və tikinti şirkətləri ilə uğurla əməkdaşlıq etmişik.
+            2023–2026-cı illər ərzində aşağıdakı dövlət qurumları, holdinqlər, hotel, idman, tibb, sənaye müəssisələri və tikinti şirkətləri ilə uğurla əməkdaşlıq etmişik.
           </p>
         </div>
 
