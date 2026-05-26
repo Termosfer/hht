@@ -164,7 +164,7 @@ const Footer = () => {
           <div className="w-full">
             <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
               <span className="w-2.5 h-2.5 bg-[#E04B26] rounded-full"></span>
-              Lokasiya
+              Məkan
             </h4>
             <div className="relative w-full h-48 rounded-2xl overflow-hidden border border-white/10 shadow-lg group">
               <iframe
